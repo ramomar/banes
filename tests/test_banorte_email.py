@@ -164,6 +164,15 @@ def test_spei_devolution_email(load_email):
     assert actual == expected
 
 
+def test_spei_income_email(load_email):
+    """it should be able to identify and scrape data from a income email"""
+    html = load_email('spei-income-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'SPEI_INCOME_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:

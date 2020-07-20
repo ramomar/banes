@@ -17,6 +17,7 @@ from . import nip_change_email
 from . import phone_recharge_email
 from . import service_payment_email
 from . import spei_devolution_email
+from . import spei_income_email
 
 
 class MultipleMatchesException(Exception):
@@ -47,6 +48,7 @@ _email_scrapers = [
     phone_recharge_email,
     service_payment_email,
     spei_devolution_email,
+    spei_income_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\
