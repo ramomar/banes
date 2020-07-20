@@ -1,6 +1,6 @@
 from typing import Callable, List
 from bs4 import BeautifulSoup
-from .record import Record
+from .records import Record
 
 
 def banorte_email_scraper(scrape: Callable[[List[str]], Record]) -> Callable[[str], Record]:

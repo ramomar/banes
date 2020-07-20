@@ -1,5 +1,5 @@
 from baes import fast_transfer_email
-from baes.record import ExpenseRecord, ExtraAmount, Receiver
+from baes.records import ExpenseRecord, ExtraAmount, Receiver
 
 FAST_TRANSFER_BANORTE_EMAIL_PATH = 'fast-transfer-banorte-email.html'
 FAST_TRANSFER_OTHER_BANKS_EMAIL_PATH = 'fast-transfer-other-banks-email.html'

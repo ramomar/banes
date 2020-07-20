@@ -1,5 +1,5 @@
 from typing import List
-from .record import ExpenseRecord, Receiver, ExtraAmount, EXPENSE_RECORD_TYPE
+from .records import ExpenseRecord, Receiver, ExtraAmount, EXPENSE_RECORD_TYPE
 from .scraper import banorte_email_scraper
 from .amount import extract_amount
 

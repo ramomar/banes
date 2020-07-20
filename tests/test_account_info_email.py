@@ -1,5 +1,5 @@
 from baes import account_info_email
-from baes.record import AccountOperationRecord
+from baes.records import AccountOperationRecord
 
 EMAIL_PATH = 'account-info-email.html'
 

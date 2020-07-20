@@ -1,5 +1,5 @@
 from baes import charge_email
-from baes.record import ExpenseRecord, Channel
+from baes.records import ExpenseRecord, Channel
 
 EMAIL_PATH = 'charge-email.html'
 

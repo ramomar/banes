@@ -1,5 +1,5 @@
 from typing import Dict, List, Tuple, Callable, Optional
-from .record import Record
+from .records import Record
 from . import account_info_email
 from . import cash_withdrawal_email
 from . import cash_withdrawal_alt_email

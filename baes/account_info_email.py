@@ -1,5 +1,5 @@
 from typing import List
-from .record import AccountOperationRecord, ACCOUNT_OPERATION_TYPE
+from .records import AccountOperationRecord, ACCOUNT_OPERATION_TYPE
 from .scraper import banorte_email_scraper
 
 EMAIL_TYPE = 'ACCOUNT_INFO_EMAIL'
