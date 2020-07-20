@@ -38,7 +38,7 @@ def test_scrape_charge_email(load_email):
     assert actual == expected
 
 
-def test_cc_payment_other_banks(load_email):
+def test_cc_payment_other_banks_email(load_email):
     """it should be able to identify and scrape data from a credit card payment other banks email"""
     html = load_email('credit-card-payment-other-banks-email.html')
     actual = banorte_email.scrape(html).source
