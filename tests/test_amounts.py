@@ -7,3 +7,11 @@ def test_extract_amount_a():
     expected = '792.00'
 
     assert actual == expected
+
+
+def test_extract_amount_b():
+    """it should be able to extract amounts like: $ 63.37 MN"""
+    actual = amounts.extract_amount('$ 63.37 MN')
+    expected = '63.37'
+
+    assert actual == expected
