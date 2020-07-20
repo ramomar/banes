@@ -11,6 +11,7 @@ from . import ddc_activated_email
 from . import ddc_blocked_email
 from . import ddc_canceled_email
 from . import fast_transfer_email
+from . import id_by_phone_email
 
 
 class MultipleMatchesException(Exception):
@@ -33,6 +34,7 @@ _email_scrapers = [
     ddc_blocked_email,
     ddc_canceled_email,
     fast_transfer_email,
+    id_by_phone_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\
