@@ -9,6 +9,7 @@ from . import dc_blocked_email
 from . import deposit_email
 from . import ddc_activated_email
 from . import ddc_blocked_email
+from . import ddc_canceled_email
 from . import fast_transfer_email
 
 
@@ -27,10 +28,11 @@ _email_scrapers = [
     charge_email,
     cc_payment_other_banks_email,
     dc_blocked_email,
-    fast_transfer_email,
     deposit_email,
     ddc_activated_email,
     ddc_blocked_email,
+    ddc_canceled_email,
+    fast_transfer_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\
