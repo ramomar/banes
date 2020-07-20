@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 
 EXPENSE_RECORD_TYPE = 'EXPENSE'
 ACCOUNT_OPERATION_TYPE = 'ACCOUNT_OPERATION'
+INCOME_RECORD_TYPE = 'INCOME'
 
 
 @dataclass
@@ -52,4 +53,13 @@ class AccountOperationRecord:
     channel: Optional[Channel] = None
 
 
-Record = Union[ExpenseRecord, AccountOperationRecord]
+@dataclass
+class IncomeRecord:
+    source: str
+    type: str
+    note: str
+    operation_date: Optional[str] = None
+    amount: Optional[str] = None
+
+
+Record = Union[ExpenseRecord, AccountOperationRecord, IncomeRecord]

@@ -15,3 +15,11 @@ def test_extract_amount_b():
     expected = '63.37'
 
     assert actual == expected
+
+
+def test_extract_amount_spei():
+    """should be able to extract amounts like: 1,000.00"""
+    actual = amounts.extract_amount_spei('1,000.00')
+    expected = '1000.00'
+
+    assert actual == expected
