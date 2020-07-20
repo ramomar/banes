@@ -56,6 +56,15 @@ def test_debit_card_blocked_email(load_email):
     assert actual == expected
 
 
+def test_deposit_email(load_email):
+    """it should be able to identify and scrape data from a deposit email"""
+    html = load_email('deposit-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'DEPOSIT_EMAIL'
+
+    assert actual == expected
+
+
 def test_scrape_fast_transfer_banorte_email(load_email):
     """it should be able to identify and scrape data from a fast transfer email (banorte)"""
     html = load_email('fast-transfer-banorte-email.html')
