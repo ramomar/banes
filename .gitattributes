@@ -1,1 +1,1 @@
-tests/emails -linguist-vendored
+tests/emails linguist-vendored
