@@ -13,7 +13,8 @@ def is_matching(html: str) -> bool:
 
 @banorte_spei_email_scraper
 def scrape(rows: List[str]) -> IncomeRecord:
-    sanitized_note = re.sub(r'\s+', ' ', re.sub(r'\n', ' ', ' '.join(rows[7:10])))
+    note = ' '.join(rows[7:10]).rstrip()
+    sanitized_note = re.sub(r'\s+', ' ', note)
 
     operation_data = sanitized_note.split(' ')
 
