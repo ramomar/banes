@@ -14,6 +14,7 @@ from . import fast_transfer_email
 from . import id_by_phone_email
 from . import limit_modification_email
 from . import nip_change_email
+from . import phone_recharge_email
 
 
 class MultipleMatchesException(Exception):
@@ -39,6 +40,7 @@ _email_scrapers = [
     id_by_phone_email,
     limit_modification_email,
     nip_change_email,
+    phone_recharge_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\
