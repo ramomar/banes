@@ -120,4 +120,4 @@ def test_scraper_not_implemented_exception():
     with pytest.raises(banorte_email.ScraperNotImplementedException) as excinfo:
         banorte_email.scrape('<a></a>')
 
-        assert 'Scraper not implemented' in excinfo.value
+    assert 'Scraper not implemented' in str(excinfo.value)
