@@ -165,7 +165,7 @@ def test_spei_devolution_email(load_email):
 
 
 def test_spei_income_email(load_email):
-    """it should be able to identify and scrape data from a income email"""
+    """it should be able to identify and scrape data from a spei income email"""
     html = load_email('spei-income-email.html')
     actual = banorte_email.scrape(html).source
     expected = 'SPEI_INCOME_EMAIL'
