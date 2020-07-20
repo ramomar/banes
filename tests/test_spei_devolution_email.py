@@ -1,5 +1,5 @@
-from baes import spei_devolution_email
-from baes.records import IncomeRecord
+from banes import spei_devolution_email
+from banes.records import IncomeRecord
 
 EMAIL_PATH = 'spei-devolution-email.html'
 

@@ -1,4 +1,4 @@
-from baes import amounts
+from banes import amounts
 
 
 def test_extract_amount_a():

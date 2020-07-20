@@ -1,5 +1,5 @@
-from baes import phone_recharge_email
-from baes.records import ExpenseRecord
+from banes import phone_recharge_email
+from banes.records import ExpenseRecord
 
 EMAIL_PATH = 'phone-recharge-email.html'
 

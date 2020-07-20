@@ -1,5 +1,5 @@
-from baes import nip_change_email
-from baes.records import AccountOperationRecord, Channel
+from banes import nip_change_email
+from banes.records import AccountOperationRecord, Channel
 
 EMAIL_PATH = 'nip-change-email.html'
 

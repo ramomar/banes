@@ -1,5 +1,5 @@
-from baes import ddc_canceled_email
-from baes.records import AccountOperationRecord
+from banes import ddc_canceled_email
+from banes.records import AccountOperationRecord
 
 EMAIL_PATH = 'digital-debit-card-canceled-email.html'
 

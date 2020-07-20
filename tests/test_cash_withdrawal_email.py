@@ -1,5 +1,5 @@
-from baes import cash_withdrawal_email
-from baes.records import ExpenseRecord, Channel, ChannelDetails
+from banes import cash_withdrawal_email
+from banes.records import ExpenseRecord, Channel, ChannelDetails
 
 EMAIL_PATH = 'cash-withdrawal-email.html'
 

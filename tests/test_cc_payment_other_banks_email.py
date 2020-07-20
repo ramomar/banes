@@ -1,5 +1,5 @@
-from baes import cc_payment_other_banks_email
-from baes.records import ExpenseRecord, ExtraAmount, Receiver
+from banes import cc_payment_other_banks_email
+from banes.records import ExpenseRecord, ExtraAmount, Receiver
 
 EMAIL_PATH = 'credit-card-payment-other-banks-email.html'
 

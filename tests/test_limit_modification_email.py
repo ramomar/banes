@@ -1,5 +1,5 @@
-from baes import limit_modification_email
-from baes.records import AccountOperationRecord
+from banes import limit_modification_email
+from banes.records import AccountOperationRecord
 
 EMAIL_PATH = 'limit-modification-email.html'
 

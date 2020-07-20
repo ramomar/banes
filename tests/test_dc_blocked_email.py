@@ -1,5 +1,5 @@
-from baes import dc_blocked_email
-from baes.records import AccountOperationRecord
+from banes import dc_blocked_email
+from banes.records import AccountOperationRecord
 
 EMAIL_PATH = 'debit-card-blocked-email.html'
 

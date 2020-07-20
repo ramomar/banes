@@ -1,5 +1,5 @@
 import pytest
-from baes import banorte_email
+from banes import banorte_email
 
 
 def test_scrape_account_info_email(load_email):

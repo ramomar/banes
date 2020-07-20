@@ -1,5 +1,5 @@
-from baes import id_by_phone_email
-from baes.records import AccountOperationRecord
+from banes import id_by_phone_email
+from banes.records import AccountOperationRecord
 
 EMAIL_PATH = 'identification-by-phone-email.html'
 

@@ -1,5 +1,5 @@
-from baes import deposit_email
-from baes.records import ExpenseRecord, Receiver
+from banes import deposit_email
+from banes.records import ExpenseRecord, Receiver
 
 EMAIL_PATH = 'deposit-email.html'
 
