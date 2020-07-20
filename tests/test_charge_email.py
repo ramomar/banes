@@ -12,7 +12,7 @@ def test_is_matching(load_email):
 
 
 def test_scrape(load_email):
-    """it should be able to scrape a charge email email"""
+    """it should be able to scrape a charge email"""
     html = load_email(EMAIL_PATH)
     actual = charge_email.scrape(html)
     expected = ExpenseRecord(
