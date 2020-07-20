@@ -146,6 +146,15 @@ def test_phone_recharge_email(load_email):
     assert actual == expected
 
 
+def test_service_payment_email(load_email):
+    """it should be able to identify and scrape data from a service payment email"""
+    html = load_email('service-payment-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'SERVICE_PAYMENT_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
