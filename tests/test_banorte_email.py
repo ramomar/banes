@@ -112,7 +112,10 @@ def test_scrape_fast_transfer_other_banks_email(load_email):
 
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
-    pass
+    with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
+        banorte_email.scrape('RETIRO DE EFECTIVO DISPOSICION DE EFECTIVO')
+
+    assert 'Multiple matches: CASH_WITHDRAWAL_EMAIL, CASH_WITHDRAWAL_ALT_EMAIL' in str(exinfo.value)
 
 
 def test_scraper_not_implemented_exception():

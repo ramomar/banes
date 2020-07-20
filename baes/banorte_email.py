@@ -46,7 +46,7 @@ def _get_email_type(html: str) -> Optional[str]:
     matches = [email_type for (email_type, is_matching) in _email_type_to_matcher if is_matching(html)]
 
     if len(matches) > 1:
-        raise MultipleMatchesException(f'Multiple matches: {", ".join(matches)}.')
+        raise MultipleMatchesException(f'Multiple matches: {", ".join(matches)}')
 
     if len(matches) == 0:
         return None
