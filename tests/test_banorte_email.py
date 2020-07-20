@@ -119,6 +119,15 @@ def test_scrape_id_by_phone_email(load_email):
     assert actual == expected
 
 
+def test_limit_modification_email(load_email):
+    """it should be able to identify and scrape data from a identification by phone email"""
+    html = load_email('limit-modification-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'LIMIT_MODIFICATION_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
