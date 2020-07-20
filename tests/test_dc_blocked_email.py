@@ -1,4 +1,4 @@
-from baes import dc_card_blocked_email
+from baes import dc_blocked_email
 from baes.records import AccountOperationRecord
 
 EMAIL_PATH = 'debit-card-blocked-email.html'
@@ -8,13 +8,13 @@ def test_is_matching(load_email):
     """it should be able to match a debit card blocked email"""
     html = load_email(EMAIL_PATH)
 
-    assert dc_card_blocked_email.is_matching(html)
+    assert dc_blocked_email.is_matching(html)
 
 
 def test_scrape(load_email):
     """it should be able to scrape a debit card blocked email"""
     html = load_email(EMAIL_PATH)
-    actual = dc_card_blocked_email.scrape(html)
+    actual = dc_blocked_email.scrape(html)
     expected = AccountOperationRecord(
         type='ACCOUNT_OPERATION',
         source='DEBIT_CARD_BLOCKED_EMAIL',
