@@ -4,7 +4,7 @@ from . import account_info_email
 from . import cash_withdrawal_email
 from . import cash_withdrawal_alt_email
 from . import charge_email
-from . import cc_payment_other_banks
+from . import cc_payment_other_banks_email
 from . import fast_transfer_email
 
 
@@ -21,7 +21,7 @@ _email_scrapers = [
     cash_withdrawal_email,
     cash_withdrawal_alt_email,
     charge_email,
-    cc_payment_other_banks,
+    cc_payment_other_banks_email,
     fast_transfer_email,
 ]
 

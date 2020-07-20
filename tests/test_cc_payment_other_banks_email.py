@@ -1,4 +1,4 @@
-from baes import cc_payment_other_banks
+from baes import cc_payment_other_banks_email
 from baes.record import ExpenseRecord, ExtraAmount, Receiver
 
 EMAIL_PATH = 'credit-card-payment-other-banks-email.html'
@@ -8,13 +8,13 @@ def test_is_matching(load_email):
     """it should be able to match a credit card payment other banks email"""
     html = load_email(EMAIL_PATH)
 
-    assert cc_payment_other_banks.is_matching(html)
+    assert cc_payment_other_banks_email.is_matching(html)
 
 
 def test_scrape(load_email):
     """it should be able to scrape a credit card payment other banks email"""
     html = load_email(EMAIL_PATH)
-    actual = cc_payment_other_banks.scrape(html)
+    actual = cc_payment_other_banks_email.scrape(html)
     expected = ExpenseRecord(
         type='EXPENSE',
         source='CREDIT_CARD_PAYMENT_OTHER_BANKS_EMAIL',
