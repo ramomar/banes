@@ -49,6 +49,7 @@ class AccountOperationRecord:
     type: str
     note: str
     operation_date: Optional[str] = None
+    channel: Optional[Channel] = None
 
 
 Record = Union[ExpenseRecord, AccountOperationRecord]

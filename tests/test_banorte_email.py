@@ -128,6 +128,15 @@ def test_limit_modification_email(load_email):
     assert actual == expected
 
 
+def test_nip_change_email(load_email):
+    """it should be able to identify and scrape data from a nip change email"""
+    html = load_email('nip-change-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'NIP_CHANGE_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
