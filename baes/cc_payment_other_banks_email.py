@@ -1,6 +1,6 @@
 from typing import List
 from .records import ExpenseRecord, Receiver, ExtraAmount, EXPENSE_RECORD_TYPE
-from .scraper import banorte_email_scraper
+from .html_email_scrapers import banorte_email_scraper
 from .amounts import extract_amount
 
 EMAIL_TYPE = 'CREDIT_CARD_PAYMENT_OTHER_BANKS_EMAIL'

@@ -1,6 +1,6 @@
 from typing import List
 from .records import ExpenseRecord, ExtraAmount, Receiver, EXPENSE_RECORD_TYPE
-from .scraper import banorte_email_scraper
+from .html_email_scrapers import banorte_email_scraper
 from .amounts import extract_amount
 
 EMAIL_TYPE = 'FAST_TRANSFER_EMAIL'
