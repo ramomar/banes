@@ -20,10 +20,12 @@ from . import service_payment_email
 
 class MultipleMatchesException(Exception):
     """Raise when there are multiple matching scrapers"""
+    pass
 
 
 class ScraperNotImplementedException(Exception):
     """Raise when there is no matching scraper"""
+    pass
 
 
 _email_scrapers = [
