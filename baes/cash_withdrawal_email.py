@@ -1,7 +1,7 @@
 from typing import List
 from .records import ExpenseRecord, Channel, ChannelDetails, EXPENSE_RECORD_TYPE
 from .scraper import banorte_email_scraper
-from .amount import extract_amount
+from .amounts import extract_amount
 
 EMAIL_TYPE = 'CASH_WITHDRAWAL_EMAIL'
 
