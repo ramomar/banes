@@ -30,7 +30,7 @@ class ScraperNotImplementedException(Exception):
     pass
 
 
-_email_scrapers: Any = [
+_email_scrapers: List[Any] = [
     account_info_email,
     cash_withdrawal_email,
     cash_withdrawal_alt_email,
