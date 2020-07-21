@@ -5,3 +5,6 @@
 .python-version
 __pycache__
 env
+build/
+dist
+
