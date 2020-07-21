@@ -26,7 +26,7 @@ class MultipleMatchesException(Exception):
 
 
 class ScraperNotImplementedException(Exception):
-    """Raise when there is no matching scraper"""
+    """Raise when the scraper has not been implemented"""
     pass
 
 
