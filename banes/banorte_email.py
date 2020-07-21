@@ -30,6 +30,7 @@ class ScraperNotImplementedException(Exception):
     pass
 
 
+# List[Any] so as to avoid some mypy complaints
 _email_scrapers: List[Any] = [
     account_info_email,
     cash_withdrawal_email,
