@@ -11,7 +11,7 @@ setuptools.setup(
     description='Scrape Banorte transaction emails',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/ramomar/baes',
+    url='https://github.com/ramomar/banes',
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
