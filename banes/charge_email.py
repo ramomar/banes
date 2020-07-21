@@ -11,16 +11,16 @@ def is_matching(html: str) -> bool:
 
 
 @banorte_email_scraper
-def scrape(rows: List[str]) -> ExpenseRecord:
+def scrape(fields: List[str]) -> ExpenseRecord:
     return ExpenseRecord(
         type=EXPENSE_RECORD_TYPE,
         source=EMAIL_TYPE,
-        note=rows[4],
-        operation_date=rows[6].replace(r'\s+', ' '),
-        application_date=rows[8],
+        note=fields[4],
+        operation_date=fields[6].replace(r'\s+', ' '),
+        application_date=fields[8],
         channel=Channel(
-            type=rows[16],
+            type=fields[16],
         ),
-        amount=extract_amount(rows[12]),
+        amount=extract_amount(fields[12]),
     )
 

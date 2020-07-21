@@ -12,8 +12,8 @@ def is_matching(html: str) -> bool:
 
 
 @banorte_spei_email_scraper
-def scrape(rows: List[str]) -> IncomeRecord:
-    sanitized_note = re.sub(r'\s+', ' ', rows[6].rstrip())
+def scrape(fields: List[str]) -> IncomeRecord:
+    sanitized_note = re.sub(r'\s+', ' ', fields[6].rstrip())
 
     operation_data = sanitized_note.split(' ')
 

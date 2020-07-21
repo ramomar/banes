@@ -12,14 +12,14 @@ def is_matching(html: str) -> bool:
 
 
 @banorte_email_scraper
-def scrape(rows: List[str]) -> ExpenseRecord:
-    phone = re.search(r'\d+', rows[14])[0]  # type: ignore
+def scrape(fields: List[str]) -> ExpenseRecord:
+    phone = re.search(r'\d+', fields[14])[0]  # type: ignore
 
     return ExpenseRecord(
         type=EXPENSE_RECORD_TYPE,
         source=EMAIL_TYPE,
-        note=' | '.join([r.strip() for r in [rows[4], phone] if r]),
-        operation_date=f'{rows[6]} {rows[8]}',
-        amount=extract_amount(rows[18]),
+        note=' | '.join([r.strip() for r in [fields[4], phone] if r]),
+        operation_date=f'{fields[6]} {fields[8]}',
+        amount=extract_amount(fields[18]),
     )
 

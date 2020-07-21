@@ -10,10 +10,10 @@ def is_matching(html: str) -> bool:
 
 
 @banorte_email_scraper
-def scrape(rows: List[str]) -> AccountOperationRecord:
+def scrape(fields: List[str]) -> AccountOperationRecord:
     return AccountOperationRecord(
         type=ACCOUNT_OPERATION_TYPE,
         source=EMAIL_TYPE,
-        note=f'{rows[5]} | {rows[11]}',
-        operation_date=f'{rows[7]} {rows[9]}',
+        note=f'{fields[5]} | {fields[11]}',
+        operation_date=f'{fields[7]} {fields[9]}',
     )

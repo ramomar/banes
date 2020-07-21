@@ -11,15 +11,15 @@ def is_matching(html: str) -> bool:
 
 
 @banorte_email_scraper
-def scrape(rows: List[str]) -> ExpenseRecord:
+def scrape(fields: List[str]) -> ExpenseRecord:
     return ExpenseRecord(
         type=EXPENSE_RECORD_TYPE,
         source=EMAIL_TYPE,
-        note=' | '.join([r.strip() for r in [rows[4], rows[18]] if r]),
-        operation_date=f'{rows[6]} {rows[8]}',
-        amount=extract_amount(rows[16]),
+        note=' | '.join([r.strip() for r in [fields[4], fields[18]] if r]),
+        operation_date=f'{fields[6]} {fields[8]}',
+        amount=extract_amount(fields[16]),
         receiver=Receiver(
-            name=rows[10],
-            bank=rows[14],
+            name=fields[10],
+            bank=fields[14],
         ),
     )
