@@ -13,7 +13,7 @@ def is_matching(html: str) -> bool:
 
 @banorte_email_scraper
 def scrape(rows: List[str]) -> ExpenseRecord:
-    phone = re.search(r'\d+', rows[14])[0]
+    phone = re.search(r'\d+', rows[14])[0]  # type: ignore
 
     return ExpenseRecord(
         type=EXPENSE_RECORD_TYPE,

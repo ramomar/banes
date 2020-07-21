@@ -1,4 +1,4 @@
-from typing import Dict, List, Tuple, Callable, Optional
+from typing import Dict, List, Tuple, Callable, Optional, Any
 from .records import Record
 from . import account_info_email
 from . import cash_withdrawal_email
@@ -30,7 +30,7 @@ class ScraperNotImplementedException(Exception):
     pass
 
 
-_email_scrapers = [
+_email_scrapers: Any = [
     account_info_email,
     cash_withdrawal_email,
     cash_withdrawal_alt_email,
@@ -73,9 +73,9 @@ def _get_email_type(html: str) -> Optional[str]:
 def scrape(html: str) -> Record:
     email_type = _get_email_type(html)
 
-    try:
+    if email_type:
         scraper = _email_type_to_scraper[email_type]
-    except KeyError:
+    else:
         raise ScraperNotImplementedException('Scraper not implemented')
 
     return scraper(html)
