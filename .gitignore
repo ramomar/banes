@@ -4,9 +4,4 @@
 .DS_Store
 .python-version
 __pycache__
-lib
-include
-env
-bin
-activate
 pyvenv.cfg
