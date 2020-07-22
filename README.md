@@ -41,7 +41,6 @@ ExpenseRecord(
         bank='BANAMEX'
     ),
     amount='5.00',
-    channel=None,
     extra_amounts=[
         ExtraAmount(
             name='fee',
