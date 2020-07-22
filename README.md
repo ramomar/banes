@@ -1,5 +1,7 @@
 # banes
 
+![Build and test](https://github.com/ramomar/banes/workflows/Build%20and%20test/badge.svg)
+
 banes (banorte email scraper) is a library for scraping transaction emails from Banorte.
 
 ## Scrapers
