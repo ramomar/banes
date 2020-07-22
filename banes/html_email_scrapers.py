@@ -10,7 +10,7 @@ def banorte_email_scraper(scrape: FieldsToRecordCallable) -> HtmlToRecordCallabl
     def _banorte_email_scraper(html: str) -> Record:
         soup = BeautifulSoup(html, 'html.parser')
         fields = soup.find_all('td')
-        sanitized_fields = [row.get_text().strip() for row in fields]
+        sanitized_fields = [field.get_text().strip() for field in fields]
 
         return scrape(sanitized_fields)
 
@@ -21,7 +21,7 @@ def banorte_spei_email_scraper(scrape: FieldsToRecordCallable) -> HtmlToRecordCa
     def _banorte_spei_email_scraper(html: str) -> Record:
         soup = BeautifulSoup(html, 'html.parser')
         fields = soup.find_all('p')
-        sanitized_fields = [row.get_text().strip() for row in fields]
+        sanitized_fields = [field.get_text().strip() for field in fields]
 
         return scrape(sanitized_fields)
 
