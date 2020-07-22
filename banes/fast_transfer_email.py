@@ -54,7 +54,7 @@ def is_matching(html: str) -> bool:
 
 @banorte_email_scraper
 def scrape(fields: List[str]) -> ExpenseRecord:
-    bank_index = [i for i, row in enumerate(fields) if 'Banco Destino' in row][0] + 1
+    bank_index = [i for i, field in enumerate(fields) if 'Banco Destino' in field][0] + 1
     bank = fields[bank_index]
 
     if 'Banorte' in bank:
