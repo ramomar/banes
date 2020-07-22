@@ -8,7 +8,7 @@ setuptools.setup(
     version='0.0.1',
     author='Eduardo Garza',
     author_email='hola@ramomar.dev',
-    description='Scrape Banorte transaction emails',
+    description='Scrape Banorte transaction emails.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/ramomar/banes',
@@ -18,4 +18,7 @@ setuptools.setup(
         'License :: OSI Approved :: MIT License',
     ],
     python_requires='>=3.7',
+    install_requires=[
+        'beautifulsoup4'
+    ]
 )
