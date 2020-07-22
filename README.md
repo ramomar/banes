@@ -50,6 +50,8 @@ ExpenseRecord(
 )
 ```
 
+You can also independently import the scrapers listed [here](https://github.com/ramomar/banes/blob/master/banes/banorte_email.py#L3-L20).
+
 ### Record types
 
 | Record type       | Description |
