@@ -22,4 +22,3 @@ def scrape(fields: List[str]) -> ExpenseRecord:
         operation_date=f'{fields[6]} {fields[8]}',
         amount=extract_amount(fields[18]),
     )
-

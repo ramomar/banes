@@ -25,4 +25,3 @@ def scrape(fields: List[str]) -> IncomeRecord:
         operation_date=f'{operation_data[12]} {operation_data[15]}',
         amount=extract_amount_spei(operation_data[9]),
     )
-
