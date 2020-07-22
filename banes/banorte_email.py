@@ -22,12 +22,10 @@ from . import spei_income_email
 
 class MultipleMatchesException(Exception):
     """Raise when there are multiple matching scrapers"""
-    pass
 
 
 class ScraperNotImplementedException(Exception):
     """Raise when the scraper has not been implemented"""
-    pass
 
 
 # List[Any] so as to avoid some mypy complaints
