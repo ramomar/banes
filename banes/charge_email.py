@@ -23,4 +23,3 @@ def scrape(fields: List[str]) -> ExpenseRecord:
         ),
         amount=extract_amount(fields[12]),
     )
-
