@@ -14,6 +14,6 @@ def scrape(fields: List[str]) -> AccountOperationRecord:
     return AccountOperationRecord(
         type=ACCOUNT_OPERATION_TYPE,
         source=EMAIL_TYPE,
-        note=' | '.join([r.strip() for r in [fields[5], fields[11]] if r]),
+        note=' | '.join([f.strip() for f in [fields[5], fields[11]] if f]),
         operation_date=f'{fields[7]} {fields[9]}',
     )
