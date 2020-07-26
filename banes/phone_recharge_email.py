@@ -18,7 +18,7 @@ def scrape(fields: List[str]) -> ExpenseRecord:
     return ExpenseRecord(
         type=EXPENSE_RECORD_TYPE,
         source=EMAIL_TYPE,
-        note=' | '.join([r.strip() for r in [fields[4], phone] if r]),
+        note=' | '.join([f.strip() for f in [fields[4], phone] if f]),
         operation_date=f'{fields[6]} {fields[8]}',
         amount=extract_amount(fields[18]),
     )
