@@ -1,8 +1,8 @@
 from typing import List
 import re
 from .records import ExpenseRecord, EXPENSE_RECORD_TYPE
-from .html_email_scrapers import banorte_email_scraper
-from .amounts import extract_amount
+from ._html_email_scrapers import banorte_email_scraper
+from ._amounts import extract_amount
 
 EMAIL_TYPE = 'PHONE_RECHARGE_EMAIL'
 

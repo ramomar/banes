@@ -1,6 +1,6 @@
 from typing import List
 from .records import AccountOperationRecord, ACCOUNT_OPERATION_TYPE
-from .html_email_scrapers import banorte_email_scraper
+from ._html_email_scrapers import banorte_email_scraper
 
 EMAIL_TYPE = 'ACCOUNT_INFO_EMAIL'
 

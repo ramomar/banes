@@ -1,8 +1,8 @@
 from typing import List
 import re
 from .records import IncomeRecord, INCOME_RECORD_TYPE
-from .html_email_scrapers import banorte_spei_email_scraper
-from .amounts import extract_amount_spei
+from ._html_email_scrapers import banorte_spei_email_scraper
+from ._amounts import extract_amount_spei
 
 EMAIL_TYPE = 'SPEI_INCOME_EMAIL'
 
