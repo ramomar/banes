@@ -10,7 +10,7 @@ def _scrape_fast_transfer_banorte_email(fields: List[str]) -> ExpenseRecord:
     return ExpenseRecord(
         type=EXPENSE_RECORD_TYPE,
         source=EMAIL_TYPE,
-        note=' | '.join([r.strip() for r in [fields[4], fields[28], fields[20]] if r]),
+        note=' | '.join([f.strip() for f in [fields[4], fields[28], fields[20]] if f]),
         operation_date=f'{fields[6]} {fields[8]}',
         amount=extract_amount(fields[24]),
         extra_amounts=[
@@ -31,7 +31,7 @@ def _scrape_fast_transfer_other_banks_email(fields: List[str]) -> ExpenseRecord:
     return ExpenseRecord(
         type=EXPENSE_RECORD_TYPE,
         source=EMAIL_TYPE,
-        note=' | '.join([r.strip() for r in [fields[4], fields[32], fields[24]] if r]),
+        note=' | '.join([f.strip() for f in [fields[4], fields[32], fields[24]] if f]),
         operation_date=f'{fields[6]} {fields[8]}',
         amount=extract_amount(fields[28]),
         extra_amounts=[
