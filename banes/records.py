@@ -36,10 +36,10 @@ class ExpenseRecord:
     source: str
     type: str
     note: str
+    amount: str
     operation_date: Optional[str] = None
     application_date: Optional[str] = None
     receiver: Optional[Receiver] = None
-    amount: Optional[str] = None
     channel: Optional[Channel] = None
     extra_amounts: List[ExtraAmount] = field(default_factory=lambda: [])
 
