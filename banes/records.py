@@ -58,8 +58,8 @@ class IncomeRecord:
     source: str
     type: str
     note: str
+    amount: str
     operation_date: Optional[str] = None
-    amount: Optional[str] = None
 
 
 Record = Union[ExpenseRecord, AccountOperationRecord, IncomeRecord]
