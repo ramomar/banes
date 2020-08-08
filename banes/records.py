@@ -6,32 +6,32 @@ ACCOUNT_OPERATION_TYPE = 'ACCOUNT_OPERATION'
 INCOME_RECORD_TYPE = 'INCOME'
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExtraAmount:
     name: str
     amount: str
     tax: str
 
 
-@dataclass
+@dataclass(frozen=True)
 class ChannelDetails:
     name: Optional[str] = None
     location: Optional[str] = None
 
 
-@dataclass
+@dataclass(frozen=True)
 class Channel:
     type: str
     details: Optional[ChannelDetails] = None
 
 
-@dataclass
+@dataclass(frozen=True)
 class Receiver:
     name: Optional[str]
     bank: Optional[str]
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExpenseRecord:
     source: str
     type: str
@@ -44,7 +44,7 @@ class ExpenseRecord:
     extra_amounts: List[ExtraAmount] = field(default_factory=lambda: [])
 
 
-@dataclass
+@dataclass(frozen=True)
 class AccountOperationRecord:
     source: str
     type: str
@@ -53,7 +53,7 @@ class AccountOperationRecord:
     channel: Optional[Channel] = None
 
 
-@dataclass
+@dataclass(frozen=True)
 class IncomeRecord:
     source: str
     type: str
