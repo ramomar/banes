@@ -19,5 +19,5 @@ def scrape(fields: List[str]) -> AccountOperationRecord:
         type=ACCOUNT_OPERATION_TYPE,
         source=EMAIL_TYPE,
         note='Activación de Banorte Móvil',
-        operation_date=f'{date[0]} {hour[0]}',
+        operation_date=f'{date[0]} {hour[0]}', # type: ignore
     )
