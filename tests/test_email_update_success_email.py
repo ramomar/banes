@@ -12,7 +12,7 @@ def test_is_matching(load_email):
 
 
 def test_scrape(load_email):
-    """it should be able to scrape an email change success email"""
+    """it should be able to scrape an email update success email"""
     html = load_email(EMAIL_PATH)
     actual = email_update_success_email.scrape(html)
     expected = AccountOperationRecord(
