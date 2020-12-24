@@ -236,6 +236,15 @@ def test_email_update_success_email(load_email):
     assert actual == expected
 
 
+def test_third_party_account_registration_email(load_email):
+    """it should be able to identify and scrape data from a third party account registration email"""
+    html = load_email('third-party-account-registration-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'THIRD_PARTY_ACCOUNT_REGISTRATION_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:

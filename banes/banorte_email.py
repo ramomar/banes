@@ -25,6 +25,7 @@ from . import cc_payment_third_parties
 from . import email_change_confirmation_email
 from . import notification_medium_change_email
 from . import email_update_success_email
+from . import third_party_account_registration_email
 
 
 class MultipleMatchesException(Exception):
@@ -62,6 +63,7 @@ _email_scrapers: List[Any] = [
     email_change_confirmation_email,
     notification_medium_change_email,
     email_update_success_email,
+    third_party_account_registration_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\
