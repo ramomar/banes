@@ -200,6 +200,15 @@ def test_contact_media_update_email(load_email):
     assert actual == expected
 
 
+def test_cc_payment_third_parties_email(load_email):
+    """it should be able to identify and scrape data from a credit card payment third parties email"""
+    html = load_email('credit-card-payment-third-parties-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'CREDIT_CARD_PAYMENT_THIRD_PARTIES_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
