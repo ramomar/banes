@@ -5,14 +5,14 @@ EMAIL_PATH = 'banorte-movil-cancelation-email.html'
 
 
 def test_is_matching(load_email):
-    """it should be able to match a banorte movil activation email"""
+    """it should be able to match a banorte movil cancelation email"""
     html = load_email(EMAIL_PATH)
 
     assert banorte_movil_cancelation_email.is_matching(html)
 
 
 def test_scrape(load_email):
-    """it should be able to scrape a banorte movil activation email"""
+    """it should be able to scrape a banorte movil cancelation email"""
     html = load_email(EMAIL_PATH)
     actual = banorte_movil_cancelation_email.scrape(html)
     expected = AccountOperationRecord(
