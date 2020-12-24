@@ -245,6 +245,15 @@ def test_third_party_account_registration_email(load_email):
     assert actual == expected
 
 
+def test_transfer_national_banks_spei_email(load_email):
+    """it should be able to identify and scrape data from a transfer national banks email"""
+    html = load_email('transfer-national-banks-spei-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'TRANSFER_NATIONAL_BANKS_SPEI_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
