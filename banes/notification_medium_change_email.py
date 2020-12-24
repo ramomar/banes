@@ -3,7 +3,7 @@ import re
 from .records import AccountOperationRecord, Channel, ACCOUNT_OPERATION_TYPE
 from ._html_email_scrapers import banorte_email_scraper
 
-EMAIL_TYPE = 'EMAIL_CHANGE_SUCCESS_EMAIL'
+EMAIL_TYPE = 'NOTIFICATION_MEDIUM_CHANGE_EMAIL'
 
 
 def is_matching(html: str) -> bool:

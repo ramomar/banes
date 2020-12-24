@@ -23,7 +23,7 @@ from . import banorte_movil_cancelation_email
 from . import contact_media_update_email
 from . import cc_payment_third_parties
 from . import email_change_confirmation_email
-from . import email_change_success_email
+from . import notification_medium_change_email
 
 
 class MultipleMatchesException(Exception):
@@ -59,7 +59,7 @@ _email_scrapers: List[Any] = [
     contact_media_update_email,
     cc_payment_third_parties,
     email_change_confirmation_email,
-    email_change_success_email,
+    notification_medium_change_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\

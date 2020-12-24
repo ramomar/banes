@@ -218,11 +218,11 @@ def test_cc_email_change_confirmation_email(load_email):
     assert actual == expected
 
 
-def test_email_change_success_email(load_email):
+def test_notification_medium_change_email(load_email):
     """it should be able to identify and scrape data from a email change success email"""
-    html = load_email('email-change-success-email.html')
+    html = load_email('notification-medium-change-email.html')
     actual = banorte_email.scrape(html).source
-    expected = 'EMAIL_CHANGE_SUCCESS_EMAIL'
+    expected = 'NOTIFICATION_MEDIUM_CHANGE_EMAIL'
 
     assert actual == expected
 
