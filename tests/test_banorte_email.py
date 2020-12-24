@@ -219,10 +219,19 @@ def test_cc_email_change_confirmation_email(load_email):
 
 
 def test_notification_medium_change_email(load_email):
-    """it should be able to identify and scrape data from a email change success email"""
+    """it should be able to identify and scrape data from a notification medium change email"""
     html = load_email('notification-medium-change-email.html')
     actual = banorte_email.scrape(html).source
     expected = 'NOTIFICATION_MEDIUM_CHANGE_EMAIL'
+
+    assert actual == expected
+
+
+def test_email_update_success_email(load_email):
+    """it should be able to identify and scrape data from a email update success email"""
+    html = load_email('email-update-success-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'EMAIL_UPDATE_SUCCESS_EMAIL'
 
     assert actual == expected
 
