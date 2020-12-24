@@ -173,6 +173,15 @@ def test_spei_income_email(load_email):
     assert actual == expected
 
 
+def test_banorte_movil_activation_email(load_email):
+    """it should be able to identify and scrape data from a banorte movil activation email"""
+    html = load_email('banorte-movil-activation-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'BANORTE_MOVIL_ACTIVATION'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:

@@ -18,6 +18,7 @@ from . import phone_recharge_email
 from . import service_payment_email
 from . import spei_devolution_email
 from . import spei_income_email
+from . import banorte_movil_activation_email
 
 
 class MultipleMatchesException(Exception):
@@ -48,6 +49,7 @@ _email_scrapers: List[Any] = [
     service_payment_email,
     spei_devolution_email,
     spei_income_email,
+    banorte_movil_activation_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\
