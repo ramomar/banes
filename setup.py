@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='banes-ramomar',
-    version='1.0.0',
+    version='1.1.0',
     author='Eduardo Garza',
     author_email='hola@ramomar.dev',
     description='Scrape Banorte transaction emails.',
