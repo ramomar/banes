@@ -218,6 +218,15 @@ def test_cc_email_change_confirmation_email(load_email):
     assert actual == expected
 
 
+def test_email_change_success_email(load_email):
+    """it should be able to identify and scrape data from a email change success email"""
+    html = load_email('email-change-success-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'EMAIL_CHANGE_SUCCESS_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
