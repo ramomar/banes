@@ -12,9 +12,6 @@ def is_matching(html: str) -> bool:
 
 @banorte_email_scraper
 def scrape(fields: List[str]) -> ExpenseRecord:
-    print(fields)
-    for f in enumerate(fields):
-        print(f)
     return ExpenseRecord(
         type=EXPENSE_RECORD_TYPE,
         source=EMAIL_TYPE,
