@@ -177,7 +177,7 @@ def test_banorte_movil_activation_email(load_email):
     """it should be able to identify and scrape data from a banorte movil activation email"""
     html = load_email('banorte-movil-activation-email.html')
     actual = banorte_email.scrape(html).source
-    expected = 'BANORTE_MOVIL_ACTIVATION'
+    expected = 'BANORTE_MOVIL_ACTIVATION_EMAIL'
 
     assert actual == expected
 
@@ -186,7 +186,7 @@ def test_banorte_movil_cancelation_email(load_email):
     """it should be able to identify and scrape data from a banorte movil cancelation email"""
     html = load_email('banorte-movil-cancelation-email.html')
     actual = banorte_email.scrape(html).source
-    expected = 'BANORTE_MOVIL_CANCELATION'
+    expected = 'BANORTE_MOVIL_CANCELATION_EMAIL'
 
     assert actual == expected
 

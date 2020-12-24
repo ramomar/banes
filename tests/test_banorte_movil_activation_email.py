@@ -16,7 +16,7 @@ def test_scrape(load_email):
     html = load_email(EMAIL_PATH)
     actual = banorte_movil_activation_email.scrape(html)
     expected = AccountOperationRecord(
-        source='BANORTE_MOVIL_ACTIVATION',
+        source='BANORTE_MOVIL_ACTIVATION_EMAIL',
         type=ACCOUNT_OPERATION_TYPE,
         note='Activación de Banorte Móvil',
         operation_date='11/Dic/2020 12:14:47'
