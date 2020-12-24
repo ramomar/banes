@@ -191,6 +191,15 @@ def test_banorte_movil_cancelation_email(load_email):
     assert actual == expected
 
 
+def test_contact_media_update_email(load_email):
+    """it should be able to identify and scrape data from a contact media update email"""
+    html = load_email('contact-media-update-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'CONTACT_MEDIA_UPDATE_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
