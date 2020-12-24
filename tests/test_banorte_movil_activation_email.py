@@ -19,7 +19,7 @@ def test_scrape(load_email):
         source='BANORTE_MOVIL_ACTIVATION_EMAIL',
         type=ACCOUNT_OPERATION_TYPE,
         note='Activación de Banorte Móvil',
-        operation_date='11/Dic/2020 12:14:47'
+        operation_date='11/Dic/2020 12:14:47',
     )
 
     assert actual == expected

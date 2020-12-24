@@ -19,7 +19,7 @@ def test_scrape(load_email):
         source='BANORTE_MOVIL_CANCELATION_EMAIL',
         type=ACCOUNT_OPERATION_TYPE,
         note='Tu servicio ha sido cancelado exitosamente. | ************1111 | 0000000000',
-        operation_date='11Dic/2020 10:50:49 hrs.'
+        operation_date='11Dic/2020 10:50:49 hrs.',
     )
 
     assert actual == expected

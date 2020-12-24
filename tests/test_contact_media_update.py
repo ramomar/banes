@@ -19,7 +19,7 @@ def test_scrape(load_email):
         source='CONTACT_MEDIA_UPDATE_EMAIL',
         type=ACCOUNT_OPERATION_TYPE,
         note='Actualización de Medios de Contacto | email_viejo@email.com | email_nuevo@email.com',
-        operation_date='01/Dec/2020 19:14:43 horas'
+        operation_date='01/Dec/2020 19:14:43 horas',
     )
 
     assert actual == expected
