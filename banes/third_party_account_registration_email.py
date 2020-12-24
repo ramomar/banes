@@ -1,5 +1,4 @@
 from typing import List
-import re
 from .records import AccountOperationRecord, ACCOUNT_OPERATION_TYPE
 from ._html_email_scrapers import banorte_email_scraper
 
