@@ -173,6 +173,87 @@ def test_spei_income_email(load_email):
     assert actual == expected
 
 
+def test_banorte_movil_activation_email(load_email):
+    """it should be able to identify and scrape data from a banorte movil activation email"""
+    html = load_email('banorte-movil-activation-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'BANORTE_MOVIL_ACTIVATION_EMAIL'
+
+    assert actual == expected
+
+
+def test_banorte_movil_cancelation_email(load_email):
+    """it should be able to identify and scrape data from a banorte movil cancelation email"""
+    html = load_email('banorte-movil-cancelation-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'BANORTE_MOVIL_CANCELATION_EMAIL'
+
+    assert actual == expected
+
+
+def test_contact_media_update_email(load_email):
+    """it should be able to identify and scrape data from a contact media update email"""
+    html = load_email('contact-media-update-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'CONTACT_MEDIA_UPDATE_EMAIL'
+
+    assert actual == expected
+
+
+def test_cc_payment_third_parties_email(load_email):
+    """it should be able to identify and scrape data from a credit card payment third parties email"""
+    html = load_email('credit-card-payment-third-parties-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'CREDIT_CARD_PAYMENT_THIRD_PARTIES_EMAIL'
+
+    assert actual == expected
+
+
+def test_cc_email_change_confirmation_email(load_email):
+    """it should be able to identify and scrape data from a email change confirmation email"""
+    html = load_email('email-change-confirmation-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'EMAIL_CHANGE_CONFIRMATION_EMAIL'
+
+    assert actual == expected
+
+
+def test_notification_medium_change_email(load_email):
+    """it should be able to identify and scrape data from a notification medium change email"""
+    html = load_email('notification-medium-change-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'NOTIFICATION_MEDIUM_CHANGE_EMAIL'
+
+    assert actual == expected
+
+
+def test_email_update_success_email(load_email):
+    """it should be able to identify and scrape data from a email update success email"""
+    html = load_email('email-update-success-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'EMAIL_UPDATE_SUCCESS_EMAIL'
+
+    assert actual == expected
+
+
+def test_third_party_account_registration_email(load_email):
+    """it should be able to identify and scrape data from a third party account registration email"""
+    html = load_email('third-party-account-registration-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'THIRD_PARTY_ACCOUNT_REGISTRATION_EMAIL'
+
+    assert actual == expected
+
+
+def test_transfer_national_banks_spei_email(load_email):
+    """it should be able to identify and scrape data from a transfer national banks email"""
+    html = load_email('transfer-national-banks-spei-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'TRANSFER_NATIONAL_BANKS_SPEI_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:

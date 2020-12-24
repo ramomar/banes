@@ -18,6 +18,15 @@ from . import phone_recharge_email
 from . import service_payment_email
 from . import spei_devolution_email
 from . import spei_income_email
+from . import banorte_movil_activation_email
+from . import banorte_movil_cancelation_email
+from . import contact_media_update_email
+from . import cc_payment_third_parties
+from . import email_change_confirmation_email
+from . import notification_medium_change_email
+from . import email_update_success_email
+from . import third_party_account_registration_email
+from . import transfer_national_banks_spei_email
 
 
 class MultipleMatchesException(Exception):
@@ -48,6 +57,15 @@ _email_scrapers: List[Any] = [
     service_payment_email,
     spei_devolution_email,
     spei_income_email,
+    banorte_movil_activation_email,
+    banorte_movil_cancelation_email,
+    contact_media_update_email,
+    cc_payment_third_parties,
+    email_change_confirmation_email,
+    notification_medium_change_email,
+    email_update_success_email,
+    third_party_account_registration_email,
+    transfer_national_banks_spei_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\

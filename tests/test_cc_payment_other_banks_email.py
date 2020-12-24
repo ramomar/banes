@@ -27,7 +27,7 @@ def test_scrape(load_email):
                 tax='0.00',
             ),
         ],
-        amount='754.00',
+        amount='2754.00',
         receiver=Receiver(
             name='OTRO USUARIO',
             bank='STP',

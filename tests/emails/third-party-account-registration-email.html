@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <html>
+
+      <head>
+        <style type="text/css"> .dTablaf{position:relative; border-top:solid 1px #CCC; border-bottom:dashed 1px #CCC; padding:10px 0 15px 0; margin-bottom:10px} .dTablaf select{background:url(../images/bg_input.jpg) repeat-x; width:100%; border-left:solid 1px #666; border-top:solid 1px #666; border-bottom:solid 1px #CCC; border-right:none; font-size:11px; line-height:13px;             font-family: Verdana, Arial, Helvetica, sans-serif;        } .dTablaf td{font-size:12px; padding:6px 0 7px 5px; color:#000; line-height:14px; font-family:Verdana, Arial}        .dTablaf td a{color:#000} </style>
+      </head>
+      <body>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 622px">
+          <tr>
+            <td colspan="3">
+              <img name="header_logo" src="https://www.banorte.com/cms/notificaciones/Header_Notificaciones_GFB.png" border="0" alt=""/>
+            </td>
+          </tr>
+        </table>
+        <table class="dTablaf" border="0" cellpadding="0" cellspacing="0" style="width: 622px">
+          <tr>
+            <td colspan="3"/>
+          </tr>
+       <tr>
+        <td colspan="3">
+         <span style="font-family: Arial">
+          Estimado(a) :
+          <strong>
+             USUARIO DE BANORTE
+          </strong>
+      <br>
+      <br>
+      Añadiste una cuenta en tu Banco en Línea. Ahora solo:
+      </br>
+      </br>
+      <br>
+        <br>
+        ✓ En tu app Banorte Móvil abre la notificación que te enviamos y elige “Continuar”
+        </br>
+       </br>
+      <br>
+        <br>
+        X Si no solicitaste o ya no deseas agregar esta cuenta, selecciona "Rechazar".
+        </br>
+       </br>
+          <br>
+        <br>
+        Estos son los datos de tu operación:
+        </br>
+       </br>
+
+
+        </span>
+        </td>
+       </tr>
+  <!--        <tr>
+            <td colspan="3">
+              <span style="font-family: Arial">                  Estimado(a): <strong>
+                  USUARIO DE BANORTE
+                </strong>
+                <br />
+                <br />                                      La siguiente operación ha sido registrada en tu Banco en línea.                </span>
+            </td>
+          </tr>-->
+<!--
+          <xsl:if test="Correo/Codigo != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                          Operación:                      </td>
+              <td align="left">                          Alta de Nueva Cuenta en Catálogo de Terceros                      </td>
+            </tr>
+          </xsl:if>-->
+
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                          Operación:                      </td>
+              <td align="left">                        <strong>Registro de Cuenta en catálogo de terceros Banorte</strong>                     </td>
+            </tr>
+
+<!--
+          <xsl:if test="Correo/Codigo = ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                          Operación:                      </td>
+              <td align="left">                          Activación de Alta de Nueva Cuenta en Catálogo de Terceros                      </td>
+            </tr>
+          </xsl:if>-->
+
+          <tr>
+            <td width="26%" align="right" nowrap="nowrap">                          Fecha de operación:                      </td>
+            <td>
+              12-Dic-2020
+            </td>
+          </tr>
+          <tr>
+            <td width="26%" align="right" nowrap="nowrap">                          Hora de operación:                      </td>
+            <td>
+              02:48:32 horas
+            </td>
+          </tr>
+          <tr>
+            <td width="26%" align="right" nowrap="nowrap">                          Alias:                      </td>
+            <td>
+              Ana Nu
+            </td>
+          </tr>
+<!--
+          <xsl:if test="Correo/TipoCuenta = '8' or Correo/TipoCuenta = '12'">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Tipo de Cuenta:                          </td>
+              <td>
+                <xsl:value-of select="Correo/TipoCuentaINB" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+
+<!--
+          <xsl:if test="Correo/TipoCuenta != '1' and Correo/TipoCuenta != '12'">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Número de Cuenta:                          </td>
+              <td>
+                <xsl:value-of select="Correo/NumeroCuenta" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/TipoTransferencia != '' ">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                         Tipo de Transferencia:                          </td>
+              <td>
+                <xsl:value-of select="Correo/TipoTransferencia" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/TipoCuenta = '12' ">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Número de Tarjeta:                          </td>
+              <td>
+                <xsl:value-of select="Correo/NumeroCuenta" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/TipoCuenta = '1'">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              CLABE o Plástico Destino:                          </td>
+              <td>
+                <xsl:value-of select="Correo/PlasticoDestino" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              CLABE o Plástico Destino:                          </td>
+              <td>
+                *******1111
+              </td>
+            </tr>
+
+<!--
+          <xsl:if test="Correo/BancoDestino != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Banco Destino:                          </td>
+              <td>
+                <xsl:value-of select="Correo/BancoDestino" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Banco destino:                          </td>
+              <td>
+                STP
+              </td>
+            </tr>
+
+<!--
+          <xsl:if test="Correo/BancoIntermediario != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Banco Intermediario:                          </td>
+              <td>
+                <xsl:value-of select="Correo/BancoIntermediario" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/PoblacionDestino != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Población Destino:                          </td>
+              <td>
+                <xsl:value-of select="Correo/PoblacionDestino" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/PaisDestino != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              País Destino:                          </td>
+              <td>
+                <xsl:value-of select="Correo/PaisDestino" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/SWIFTDestino != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              SWIFT/ABA Banco Destino:                          </td>
+              <td>
+                <xsl:value-of select="Correo/SWIFTDestino" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/Moneda != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Tipo de Moneda:                          </td>
+              <td>
+                <xsl:value-of select="Correo/Moneda" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Moneda de la cuenta:                          </td>
+              <td>
+                MXP
+              </td>
+            </tr>
+
+<!--
+          <xsl:if test="Correo/BcoCorresponsal != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                          Banco Corresponsal:                          </td>
+              <td>
+                <xsl:value-of select="Correo/BcoCorresponsal" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/CtaBcoCorresponsal != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">               Cuenta del Banco Corresponsal:                          </td>
+              <td>
+                <xsl:value-of select="Correo/CtaBcoCorresponsal" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+          <tr>
+            <td width="26%" align="right" nowrap="nowrap">                          Nombre del Beneficiario:                      </td>
+            <td>
+              Ana
+            </td>
+          </tr>
+<!--
+          <xsl:if test="Correo/DireccionBeneficiario != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Dirección del Beneficiario:                          </td>
+              <td>
+                <xsl:value-of select="Correo/DireccionBeneficiario" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/CiudadBeneficiario != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Ciudad del Beneficiario:                          </td>
+              <td>
+                <xsl:value-of select="Correo/CiudadBeneficiario" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+<!--
+          <xsl:if test="Correo/PaisBeneficiario != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                              Pais del Beneficiario:                          </td>
+              <td>
+                <xsl:value-of select="Correo/PaisBeneficiario" />
+              </td>
+            </tr>
+          </xsl:if>-->
+
+          <tr>
+            <td width="26%" align="right" nowrap="nowrap">                          RFC del Beneficiario:                      </td>
+            <td>
+              ALG12
+            </td>
+          </tr>
+          <tr>
+            <td width="26%" align="right" nowrap="nowrap">                          E-mail del Beneficiario:                      </td>
+            <td>
+              ana@email.com
+            </td>
+          </tr>
+          <tr>
+            <td width="26%" align="right" nowrap="nowrap">                          Teléfono del Beneficiario:                      </td>
+            <td>
+              No Capturado
+            </td>
+ <!--         </tr>
+
+          <xsl:if test="Correo/Codigo != ''">
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                          Código de Activación:                      </td>
+              <td>
+                <xsl:value-of select="Correo/Codigo" />
+              </td>
+            </tr>-->
+          <!--    <tr>
+              <td width="26%" align="right" nowrap="nowrap">                          Nota:                      </td>
+              <td>                          Se presentará una liga en la nueva cuenta dada de alta, la cual debes seleccionar para activar la cuenta, ingresando el código que aquí se presenta.                      </td>
+            </tr>
+          </xsl:if>-->
+ <!--
+       <tr>
+              <td width="26%" align="right" nowrap="nowrap">                          Código de Activación:                      </td>
+              <td>
+                123a00bc
+              </td>
+            </tr>
+            <tr>
+              <td width="26%" align="right" nowrap="nowrap">                          Nota:                      </td>
+              <td>                          Se presentará una liga en la nueva cuenta dada de alta, la cual debes seleccionar para activar la cuenta, ingresando el código que aquí se presenta.                      </td>
+            </tr>
+-->
+          <!--<tr>
+            <td width="26%" align="right" nowrap="nowrap">                          Aviso Importante:                      </td>
+            <td>                          Si no reconoces esta operación favor de comunicarte al 01 800 7132681                      </td>
+          </tr>-->
+          <tr>
+            <td colspan="3"/>
+          </tr>
+		  <tr>
+            <td colspan="3">
+              <span style="font-size: 8pt; font-family: Arial">Nota: Enviamos una notificación a tu Banorte Móvil. Responde antes de 24 horas para continuar y evitar que la cuenta se elimine.</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3"/>
+          </tr>
+          <tr>
+            <td colspan="3"/>
+          </tr>
+          <tr>
+            <td colspan="3" align="center">
+              <span style="font-size: 8pt; font-family: Arial">Gracias por utilizar tu Banco en Línea  </span>
+            </td>
+ 	</tr>
+<tr>
+            <td colspan="3">
+              <span style="font-size: 8pt; font-family: Arial">Nota: La fecha y hora de este mensaje("Enviado  el") podrá variar respecto a la fecha/hora real de operación de su transacción("Operado  el"). Esto dependerá de la configuración de sus servicios de correo y/ocomputadora  en cuanto a su zona horaria. </span>
+            </td>
+          </tr>        </table>
+<table>
+</table>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 622px">
+          <tr>
+            <td colspan="3">
+              <img src="https://www.banorte.com/cms/notificaciones/Footer_Notificaciones_GFB.png"/>
+            </td>
+          </tr>
+        </table>
+            <table border="0" width="622" style="width:466.5pt">
+          <tr>
+            <td>
+              <p>
+                <span style="font-size:8.0pt;font-family:Arial;color:black">
+                  <br/>Este correo electronico es confidencial y/o puede contener informacion privilegiada.<br/> Si usted no es su destinatario o no es alguna persona autorizada por este para recibir sus correos electronicos, NO debera usted utilizar, copiar, revelar, o tomar ninguna accion basada en este correo electronico o cualquier otra informacion incluida en el, favor de notificar al remitente de inmediato mediante el reenvio de este correo electronico y borrar a continuacion totalmente este correo electronico y sus anexos.<br/>Nota: Los acentos y caracteres especiales fueron omitidos para su correcta lectura en cualquier medio electronico.</span>
+              </p><p>
+                <span style="font-size:8.0pt;font-family:Arial;color:black">This e-mail is confidential and/or may contain privileged information.<br/>If you are not the addressee or authorized to receive this for the addressee, you must not use, copy, disclose, or take any action based on this message or any other information herein, please advise the sender immediately by reply this e-mail and delete this e-mail and its attachments.</span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+

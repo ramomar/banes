@@ -5,7 +5,7 @@
 banes (banorte email scraper) is a library for scraping transaction emails from Banorte.
 
 ## Scrapers
-The library includes 18 scrapers of different types of emails collected over 1 year period.
+The library includes 27 scrapers of different types of emails collected over a two years period.
 
 You can take a look [here](https://github.com/ramomar/banes/tree/master/tests/emails) in order to see which emails have an scraper implemented already.
 
@@ -51,7 +51,7 @@ ExpenseRecord(
 )
 ```
 
-You can also independently import the scrapers listed [here](https://github.com/ramomar/banes/blob/master/banes/banorte_email.py#L3-L20).
+You can also independently import the scrapers listed [here](https://github.com/ramomar/banes/blob/master/banes/banorte_email.py#L3-L29).
 
 ### Record types
 
