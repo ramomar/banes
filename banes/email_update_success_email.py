@@ -7,8 +7,9 @@ EMAIL_TYPE = 'EMAIL_UPDATE_SUCCESS_EMAIL'
 
 
 def is_matching(html: str) -> bool:
-    return 'la actualizacion de su\n correo electronico ha finalizado con exito' in html or \
-           'la actualizacion de su correo electronico ha finalizado con exito' in html
+    return 'Le notificamos que la actualizacion de su\n correo electronico ha finalizado con exito' in html or\
+           'Le notificamos que la actualizacion de su\r\n correo electronico ha finalizado con exito' in html or\
+           'Le notificamos que la actualizacion de su correo electronico ha finalizado con exito' in html
 
 
 @banorte_email_scraper
