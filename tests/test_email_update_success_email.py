@@ -11,6 +11,13 @@ def test_is_matching(load_email):
     assert email_update_success_email.is_matching(html)
 
 
+def test_is_matching_crlf(load_email):
+    """it should be able to match an email update success email when linebreaks are encoded with CRLF"""
+    html = load_email('email-update-success-email-crlf.html')
+
+    assert email_update_success_email.is_matching(html)
+
+
 def test_scrape(load_email):
     """it should be able to scrape an email update success email"""
     html = load_email(EMAIL_PATH)
