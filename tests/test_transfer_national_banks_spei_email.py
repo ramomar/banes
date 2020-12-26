@@ -18,7 +18,7 @@ def test_scrape_fast_transfer_banorte_email(load_email):
     expected = ExpenseRecord(
         type='EXPENSE',
         source='TRANSFER_NATIONAL_BANKS_SPEI_EMAIL',
-        note='Transferencia a Otros Bancos Nacionales - SPEI | ' +
+        note='Transferencia a Otros Bancos Nacionales - SPEI | '
              'CUENTA ENLACE PERSONAL - *******1111 | Ana G - *******1111 | MBP',
         operation_date='12/Dic/2020 15:11:23 horas',
         amount='12000.00',

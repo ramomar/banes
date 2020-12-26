@@ -18,16 +18,12 @@ def test_scrape(load_email):
     expected = AccountOperationRecord(
         source='EMAIL_CHANGE_CONFIRMATION_EMAIL',
         type=ACCOUNT_OPERATION_TYPE,
-        note=''.join(
-            [
-                'Gracias por tu preferencia, Banorte recibió una solicitud para que se asigne este correo a su cuenta, '
-                'para confirmar esta solicitud favor de dar clic en el siguiente link de CONFIRMAR.  '
-                'A través de mi huella dactilar ratifico que el aviso de privacidad de Banorte está disponible '
-                'para mi consulta, por lo que otorgo mi consentimiento para el tratamiento '
-                'de mis datos personales y datos personales sensibles (biométricos) con la finalidad de autenticarme '
-                'y validar mi identidad en los canales disponibles para tal efecto.',
-            ]
-        ),
+        note='Gracias por tu preferencia, Banorte recibió una solicitud para que se asigne este correo a su cuenta, '
+             'para confirmar esta solicitud favor de dar clic en el siguiente link de CONFIRMAR.  '
+             'A través de mi huella dactilar ratifico que el aviso de privacidad de Banorte está disponible '
+             'para mi consulta, por lo que otorgo mi consentimiento para el tratamiento '
+             'de mis datos personales y datos personales sensibles (biométricos) con la finalidad de autenticarme '
+             'y validar mi identidad en los canales disponibles para tal efecto.'
     )
 
     assert actual == expected
