@@ -1,7 +1,7 @@
 from typing import List
-import re
 from .records import AccountOperationRecord, Channel, ACCOUNT_OPERATION_TYPE
 from ._html_email_scrapers import banorte_email_scraper
+from ._format import remove_extra_whitespaces
 
 EMAIL_TYPE = 'NOTIFICATION_MEDIUM_CHANGE_EMAIL'
 
@@ -16,7 +16,7 @@ def scrape(fields: List[str]) -> AccountOperationRecord:
         type=ACCOUNT_OPERATION_TYPE,
         source=EMAIL_TYPE,
         note=' | '.join([f.strip() for f in [fields[10], fields[6], fields[8]] if f]),
-        operation_date=re.sub(r'\s+', ' ', fields[4]),
+        operation_date=remove_extra_whitespaces(fields[4]),
         channel=Channel(
             type=fields[12],
         ),
