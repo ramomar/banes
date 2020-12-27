@@ -1,8 +1,8 @@
 from typing import List
-import re
 from .records import IncomeRecord, INCOME_RECORD_TYPE
 from ._html_email_scrapers import banorte_spei_email_scraper
 from ._amounts import extract_amount_spei
+from ._format import remove_extra_whitespaces
 
 EMAIL_TYPE = 'SPEI_INCOME_EMAIL'
 
@@ -13,8 +13,7 @@ def is_matching(html: str) -> bool:
 
 @banorte_spei_email_scraper
 def scrape(fields: List[str]) -> IncomeRecord:
-    sanitized_note = re.sub(r'\s+', ' ', fields[6].rstrip())
-
+    sanitized_note = remove_extra_whitespaces(fields[6].rstrip())
     operation_data = sanitized_note.split(' ')
 
     return IncomeRecord(

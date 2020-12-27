@@ -1,7 +1,7 @@
 from typing import List
-import re
 from .records import AccountOperationRecord, ACCOUNT_OPERATION_TYPE
 from ._html_email_scrapers import banorte_email_scraper
+from ._format import remove_extra_whitespaces
 
 EMAIL_TYPE = 'EMAIL_UPDATE_SUCCESS_EMAIL'
 
@@ -18,5 +18,5 @@ def scrape(fields: List[str]) -> AccountOperationRecord:
         type=ACCOUNT_OPERATION_TYPE,
         source=EMAIL_TYPE,
         note=fields[2].split('.')[0].replace('\n', ''),
-        operation_date=re.sub(r'\s+', ' ', fields[4]),
+        operation_date=remove_extra_whitespaces(fields[4]),
     )
