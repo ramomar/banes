@@ -29,6 +29,7 @@ from . import third_party_account_registration_email
 from . import transfer_national_banks_spei_email
 from . import banco_en_linea_blocked_user_email
 
+
 class MultipleMatchesException(Exception):
     """Raise when there are multiple matching scrapers"""
 
