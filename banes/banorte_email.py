@@ -27,6 +27,7 @@ from . import notification_medium_change_email
 from . import email_update_success_email
 from . import third_party_account_registration_email
 from . import transfer_national_banks_spei_email
+from . import banco_en_linea_blocked_user_email
 
 
 class MultipleMatchesException(Exception):
@@ -66,6 +67,7 @@ _email_scrapers: List[Any] = [
     email_update_success_email,
     third_party_account_registration_email,
     transfer_national_banks_spei_email,
+    banco_en_linea_blocked_user_email,
 ]
 
 _email_type_to_scraper: Dict[str, Callable[[str], Record]] =\
