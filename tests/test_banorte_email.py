@@ -254,15 +254,6 @@ def test_transfer_national_banks_spei_email(load_email):
     assert actual == expected
 
 
-def test_banco_en_linea_blocked_user_email(load_email):
-    """it should be able to identify and scrape data from a banco en linea blocked user email"""
-    html = load_email('banco-en-linea-blocked-user-email.html')
-    actual = banorte_email.scrape(html).source
-    expected = 'BANCO_EN_LINEA_BLOCKED_USER_EMAIL'
-
-    assert actual == expected
-
-
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
