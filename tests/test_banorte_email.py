@@ -263,6 +263,15 @@ def test_banco_en_linea_blocked_user_email(load_email):
     assert actual == expected
 
 
+def test_transfer_third_party_email(load_email):
+    """it should be able to identify and scrape data from a transfer third party email"""
+    html = load_email('transfer-third-party-email.html')
+    actual = banorte_email.scrape(html).source
+    expected = 'TRANSFER_THIRD_PARTY_EMAIL'
+
+    assert actual == expected
+
+
 def test_multiple_matches_exception():
     """it should throw if there are multiple matches"""
     with pytest.raises(banorte_email.MultipleMatchesException) as exinfo:
